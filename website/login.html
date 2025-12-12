@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <style>
+       nav a {
+           margin-right: 130px;
+           margin-left: 40px;
+           text-decoration: none;
+           font-size: 37px;
+           color: black;
+       }
+
+       .contain {
+           margin: 20px;
+       }
+
+       img {
+           width: 360px;
+           height: 280px;
+           margin: 20px;
+       }
+   </style>
+    <nav>
+       <a href="home.html">Home</a>
+       <a href="trainers.html">Trainers</a>
+       <a href="schedule.html">Class Schedule</a>
+       <a href="membership.html">Membership</a>
+       <a href="login.html">Login</a>
+   </nav>
+
+<div class="container">
+    <h2 align ="center">Login to Your Account</h2>
+
+    <form onsubmit="return validateLogin()">
+        <h2 align="center"
+        <label>Email:</label><br>
+        <input type="text" id="email"><br>
+        <h2 align="center"
+        <label>Password:</label><br>
+        <input type="password" id="password"><br></br>
+
+        <button onclick="submit">Login</button>
+    </form>
+</div>
+    <script>
+        function validateLogin() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            var correctEmail = "abhishek.9@gmail.com";
+            var correctPassword = "12345";
+
+            if (email === correctEmail && password === correctPassword) {
+                window.location.href = "Home.html";
+                return false;
+            } else {
+                alert("Invalid username or password");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
